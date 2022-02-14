@@ -1,0 +1,26 @@
+c5c0ae9b5c6c29611429c95f5c902964
+
+
+
+
+
+
+
+
+
+
+'use strict';
+
+
+
+var RCTEventEmitter = {
+  register: function register(eventEmitter) {
+    if (global.RN$Bridgeless) {
+      global.RN$registerCallableModule('RCTEventEmitter', function () {return eventEmitter;});
+    } else {
+      require('../BatchedBridge/BatchedBridge').registerCallableModule('RCTEventEmitter', eventEmitter);
+    }
+  } };
+
+
+module.exports = RCTEventEmitter;

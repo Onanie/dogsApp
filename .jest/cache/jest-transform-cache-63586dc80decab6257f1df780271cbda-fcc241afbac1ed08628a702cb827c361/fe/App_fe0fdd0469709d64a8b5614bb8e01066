@@ -1,0 +1,72 @@
+20737f4950d1f1620ee0c01a559a1050
+"use strict";
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = __importStar(require("react"));
+
+var react_redux_1 = require("react-redux");
+
+var redux_1 = require("redux");
+
+var Index_1 = __importDefault(require("./redux/reducers/Index"));
+
+var redux_thunk_1 = __importDefault(require("redux-thunk"));
+
+var react_native_splash_screen_1 = __importDefault(require("react-native-splash-screen"));
+
+var Navigation_1 = __importDefault(require("./Helpers/Navigation"));
+
+function App() {
+  (0, react_1.useEffect)(function () {
+    react_native_splash_screen_1.default.hide();
+  }, []);
+  return react_1.default.createElement(react_redux_1.Provider, {
+    store: (0, redux_1.createStore)(Index_1.default, (0, redux_1.applyMiddleware)(redux_thunk_1.default))
+  }, react_1.default.createElement(Navigation_1.default, null));
+}
+
+exports.default = App;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOztBQUNBOztBQUNBOztBQUNBOztBQUNBOztBQUNBOztBQUNBOztBQUNBLFNBQXdCQSxHQUF4QixHQUEyQjtBQUN6Qix5QkFBVSxZQUFLO0FBQ2JDLHlDQUFhQyxJQUFiO0FBQ0QsR0FGRCxFQUVHLEVBRkg7QUFHQSxTQUNFQyw4QkFBQ0Msc0JBQUQsRUFBUztBQUFDQyxTQUFLLEVBQUUseUJBQVlDLGVBQVosRUFBc0IsNkJBQWdCQyxxQkFBaEIsQ0FBdEI7QUFBUixHQUFULEVBQ0VKLDhCQUFDSyxvQkFBRCxFQUFXLElBQVgsQ0FERixDQURGO0FBS0Q7O0FBVERDIiwibmFtZXMiOlsiQXBwIiwicmVhY3RfbmF0aXZlX3NwbGFzaF9zY3JlZW5fMSIsImhpZGUiLCJyZWFjdF8xIiwicmVhY3RfcmVkdXhfMSIsInN0b3JlIiwiSW5kZXhfMSIsInJlZHV4X3RodW5rXzEiLCJOYXZpZ2F0aW9uXzEiLCJleHBvcnRzIl0sInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxPbmFuaWVNXFxVZGVteVByb2plY3RzXFxkb2dzQXBwXFxBcHAudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwge3VzZUVmZmVjdH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQge1Byb3ZpZGVyfSBmcm9tICdyZWFjdC1yZWR1eCc7XHJcbmltcG9ydCB7YXBwbHlNaWRkbGV3YXJlLCBjcmVhdGVTdG9yZX0gZnJvbSAncmVkdXgnO1xyXG5pbXBvcnQgcmVkdWNlcnMgZnJvbSAnLi9yZWR1eC9yZWR1Y2Vycy9JbmRleCc7XHJcbmltcG9ydCB0aHVuayBmcm9tICdyZWR1eC10aHVuayc7XHJcbmltcG9ydCBTcGxhc2hTY3JlZW4gZnJvbSAncmVhY3QtbmF0aXZlLXNwbGFzaC1zY3JlZW4nO1xyXG5pbXBvcnQgTmF2aWdhdGlvbiBmcm9tICcuL0hlbHBlcnMvTmF2aWdhdGlvbic7XHJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEFwcCgpIHtcclxuICB1c2VFZmZlY3QoKCkgPT4ge1xyXG4gICAgU3BsYXNoU2NyZWVuLmhpZGUoKTtcclxuICB9LCBbXSk7XHJcbiAgcmV0dXJuIChcclxuICAgIDxQcm92aWRlciBzdG9yZT17Y3JlYXRlU3RvcmUocmVkdWNlcnMsIGFwcGx5TWlkZGxld2FyZSh0aHVuaykpfT5cclxuICAgICAgPE5hdmlnYXRpb24gLz5cclxuICAgIDwvUHJvdmlkZXI+XHJcbiAgKTtcclxufVxyXG4iXX0=
